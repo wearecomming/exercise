@@ -22,6 +22,17 @@
                 "isDefault": true
             },
             "detail": "调试器生成的任务。"
+        },
+        {
+            "type": "java",
+            "mainClass": "java.welcome",
+            "targetPath": "${workspaceFolder}/${workspaceFolderBasename}.jar",
+            "elements": [
+                "${compileOutput}",
+                "${dependencies}"
+            ],
+            "problemMatcher": [],
+            "label": "java: exportjar:exercise"
         }
     ],
     "version": "2.0.0"
