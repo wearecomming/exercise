@@ -18,8 +18,7 @@ public class RecordSanityChecker {
             	for (; now < text.length() && (text.charAt(now) > '9' || text.charAt(now) < '0'); ++now)
             		if (text.charAt(now) != ' ' && text.charAt(now) != '	')
             			fin = true;
-            	if (now >= text.length() - 1)
-            		fin = true;
+            	if (now >= text.length())fin = true;
             	String scole = "";
             	for (; now < text.length() && text.charAt(now) >= '0' && text.charAt(now) <= '9'; ++now)
             		scole = scole + text.charAt(now);
