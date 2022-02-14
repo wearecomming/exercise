@@ -2,8 +2,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
 
-
-f = open("E:\My code\exercise\python\iris.data","r")
+f = open("E:\exercise\python\iris.data","r")
 data = f.read().splitlines()
 xray = []
 yray = []

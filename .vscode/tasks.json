@@ -3,13 +3,20 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe 生成活动文件",
-            "command": "F:\\bin\\g++.exe",
+            "command": "D:\\c++\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-I",
+                "${workspaceFolder}/include",
+                "-pthread",
+                "-I",
+                "D:\\c++\\lib\\gcc\\mingw32\\4.8.1\\include\\c++\\**",
+                "-I",
+                "D:\\c++\\lib\\gcc\\mingw32\\4.8.1\\include\\ssp\\**"
             ],
             "options": {
                 "cwd": "${fileDirname}"
