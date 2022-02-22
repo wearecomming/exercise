@@ -4,8 +4,9 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "D:\\c++\\lib\\gcc\\mingw32\\4.8.1\\include\\c++\\**",
-                "D:\\c++\\lib\\gcc\\mingw32\\4.8.1\\include\\ssp\\**"
+                "D:\\dev\\Dev-Cpp\\MinGW64\\lib\\gcc\\x86_64-w64-mingw32\\4.9.2\\include\\c++\\**",
+                "D:\\dev\\Dev-Cpp\\MinGW64\\lib\\gcc\\x86_64-w64-mingw32\\4.9.2\\include\\ssp\\**",
+                "D:\\dev\\Dev-Cpp\\MinGW64\\lib\\gcc\\x86_64-w64-mingw32\\4.9.2\\include\\**"
             ],
             "defines": [
                 "_DEBUG",
@@ -15,7 +16,7 @@
             "cStandard": "c89",
             "cppStandard": "c++98",
             "intelliSenseMode": "windows-gcc-x86",
-            "compilerPath": "D:\\c++\\bin\\gcc.exe"
+            "compilerPath": "D:\\dev\\Dev-Cpp\\MinGW64\\bin\\g++.exe"
         }
     ],
     "version": 4

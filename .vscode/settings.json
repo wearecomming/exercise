@@ -1,5 +1,6 @@
 {
     "code-runner.executorMap": {
+
     // "javascript": "node",
     // "php": "C:\\php\\php.exe",
     // "python": "python",
@@ -8,7 +9,7 @@
     // "go": "go run",
     // "html": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
     "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-    // "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+     "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
 },
 "files.associations": {
     "cstdio": "cpp"

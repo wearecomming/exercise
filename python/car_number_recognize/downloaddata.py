@@ -21,7 +21,3 @@ test_loader = torch.utils.data.DataLoader(
                              ])),
   batch_size=batch_size_test, shuffle=True)
 
-for images, labels in train_loader:    
-    print("Image batch dimensions:", type(images))    
-    print("Image label dimensions:", labels.shape)    
-    break
