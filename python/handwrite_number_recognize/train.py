@@ -1,5 +1,5 @@
 import torch
-import dataload
+import downloaddata
 import torch.nn as nn
 import torch.nn.functional as F
 
@@ -38,7 +38,7 @@ for epoch in range(num_epochs):
     train_running_loss = 0.0
     train_acc = 0.0
     network = network.train()
-    for i, (images, labels) in enumerate(dataload.train_loader):
+    for i, (images, labels) in enumerate(downloaddata.train_loader):
         images = images.to(torch.device("cpu"))
         labels = labels.to(torch.device("cpu"))
         predictions = network(images)
@@ -47,7 +47,14 @@ for epoch in range(num_epochs):
         loss.backward()
         optimizer.step()
         train_running_loss += loss.detach().item()
-        train_acc += get_accuracy(predictions, labels, dataload.batch_size_train)
+        train_acc += get_accuracy(predictions, labels, downloaddata.batch_size_train)
     network.eval()
     print('Epoch: %d | Loss: %.4f | Train Accuracy: %.2f' %(epoch, train_running_loss / i, train_acc/i))
-torch.save(network,"E:\exercise\python\handwrite_number_recognize/num.pt")
+test_acc=0.0
+for i, (images, labels) in enumerate(downloaddata.test_loader, 0):    
+    images = images.to(torch.device("cpu"))    
+    labels = labels.to(torch.device("cpu"))    
+    outputs = network(images)    
+    test_acc += get_accuracy(outputs, labels, downloaddata.batch_size_test)
+print('Test Accuracy: %.2f'%( test_acc/(i+1)))
+torch.save(network.state_dict(),"E:\exercise\python\handwrite_number_recognize/num.pt")
