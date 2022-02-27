@@ -28,6 +28,8 @@ class net_work(nn.Module):
 network = net_work()
 network.load_state_dict(torch.load("E:\exercise\python\handwrite_number_recognize/num.pt"))
 img = cv2.imread("E:\exercise\python\handwrite_number_recognize/111.jpg",cv2.IMREAD_GRAYSCALE)
+ret, img = cv2.threshold(img, 0, 255, cv2.THRESH_OTSU)
+network.eval()
 x = []
 x.append(img)
 xx = []
@@ -36,8 +38,11 @@ xx = numpy.array(xx)
 y=network(torch.Tensor(xx)).cpu( )
 cnt = 0
 y = y.detach().numpy().tolist()
+mina = 9999999
+ans = 0
 for i in y[0]:
-    if i==0:
-        print(cnt)
-        break
+    if abs(i)<mina:
+        mina = abs(i)
+        ans = cnt
     cnt+=1
+print(ans)

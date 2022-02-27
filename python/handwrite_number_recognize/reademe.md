@@ -1,3 +1,4 @@
-本项目采用cnn实现，模型为L-NET
-采用adam优化器和drouptout正则化
+本项目为手写数字识别项目，采用cnn实现，模型为LeNet5
+采用adam优化器和dropout正则化，学习率为0.001
+用户把要识别的图片放在本文件夹下，运行handewrite_number_recognize.py文件，得到输出结果
 准确度为98.68%
