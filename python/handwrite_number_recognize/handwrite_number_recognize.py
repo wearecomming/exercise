@@ -40,8 +40,6 @@ for i in range(0,28):
             black+=1
 if white>black:
     img = cv2.bitwise_not(img)
-cv2.imshow("111,",img)
-cv2.waitKey(0)
 network.eval()
 x = []
 x.append(img)
