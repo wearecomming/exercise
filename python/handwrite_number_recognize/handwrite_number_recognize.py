@@ -27,8 +27,21 @@ class net_work(nn.Module):
 
 network = net_work()
 network.load_state_dict(torch.load("E:\exercise\python\handwrite_number_recognize/num.pt"))
-img = cv2.imread("E:\exercise\python\handwrite_number_recognize/111.jpg",cv2.IMREAD_GRAYSCALE)
+img = cv2.imread("E:\exercise\python\handwrite_number_recognize/1111.jpg",cv2.IMREAD_GRAYSCALE)
+img = cv2.resize(img,(28,28))
 ret, img = cv2.threshold(img, 0, 255, cv2.THRESH_OTSU)
+white =0
+black=0
+for i in range(0,28):
+    for j in range(0,28):
+        if img[i][j]==255:
+            white += 1
+        else:
+            black+=1
+if white>black:
+    img = cv2.bitwise_not(img)
+cv2.imshow("111,",img)
+cv2.waitKey(0)
 network.eval()
 x = []
 x.append(img)
