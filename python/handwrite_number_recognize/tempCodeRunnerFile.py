@@ -1,1 +1,0 @@
-exercise\python\handwrite_number_recognize/num.pt")
