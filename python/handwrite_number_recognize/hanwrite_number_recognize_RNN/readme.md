@@ -2,7 +2,7 @@
 
 train.py训练模型，test.py测试，handwrite_number_recoginze.py生成答案文件，num.pt为模型参数
 
-采用adam优化器和dropout(p=0.2)正则化
+采用adam优化器
 
 train_batchsize为96
 
